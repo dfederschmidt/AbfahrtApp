@@ -5,7 +5,7 @@
   <tr ng-repeat="departure in departures">
     <td>{{departure.line}}</td>
     <td>{{departure.direction}}</td>
-    <td>{{departure.departure}}</td>
+    <td>{{departure.departure}}  <span class="glyphicon glyphicon-time" ng-hide="departure.departure"></span></td>
   </tr>
   </tbody>
 </table>

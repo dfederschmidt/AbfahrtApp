@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "68ee6b9b-53d0-4d8e-af3b-157fc0d7f3f8",
-      "lastModifiedDate": 1421401786022,
+      "lastModifiedDate": 1421588687680,
       "creationDate": 1421401786009
     },
     "sourceDirectory": "app",
@@ -45,6 +45,13 @@
         "id": "org.apache.cordova.splashscreen",
         "version": "0.3.0",
         "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.network-information",
+        "version": "0.2.8",
+        "selectedState": "Included",
         "data": {},
         "paramvals": {}
       }
