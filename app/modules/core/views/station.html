@@ -1,11 +1,14 @@
 <section ng-controller="StationController">
   <h3>{{stationInformation.stop}}</h3>
-<table class="table">
+<table class="table" ng-show="departures">
+  <tbody>
   <tr ng-repeat="departure in departures">
     <td>{{departure.line}}</td>
     <td>{{departure.direction}}</td>
     <td>{{departure.departure}}</td>
   </tr>
+  </tbody>
 </table>
+  <p ng-show="noService">{{noService}}</p>
 
 </section>

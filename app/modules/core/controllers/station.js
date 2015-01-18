@@ -14,8 +14,13 @@ angular
           var init = function() {
             $http.get('http://syntiux.de/abfahrt/stations/' + $stateParams.id + "/departures").
               success(function (data, status, headers, config) {
-                $scope.departures = data;
-                $http.get('http://syntiux.de/abfahrt/stations/' + $stateParams.id).
+                if(data.length == 0){
+                  $scope.noService = "In nächster Zeit halten an dieser Station keine Busse.";
+                }
+                else {
+                  $scope.departures = data;
+                }
+                  $http.get('http://syntiux.de/abfahrt/stations/' + $stateParams.id).
                   success(function (data, status, headers, config) {
                     $scope.stationInformation = data;
                   }).

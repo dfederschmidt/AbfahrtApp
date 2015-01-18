@@ -23,19 +23,22 @@
 
   <body>
     <!-- =================== Navigation bar =================== -->
-    <header class="navbar navbar-default navbar-fixed-top">
+    <header class="navbar navbar-default navbar-fixed-top navbarColor">
         <div class="navbar-inner">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#!search">
-                        AbfahrtApp
+                    <a class="navbar-brand  visible-xs" href="#!search">
+                      <img class="svtlogo" alt="Brand" src="img/svt.png">
                     </a>
-                </div>
+                  <div class="refreshBtnDiv">
+                  <button type="button" class="btn navbar-right navbar-btn refreshBtn" onclick="window.location.reload()"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                  </div>
+                  </div>
             </div>
         </div>
     </header>
 
-    <div role="main">
+    <div role="main" class="">
 
         <div class="container">
             <div class="row">
@@ -46,8 +49,35 @@
         </div>
         <!-- /.container -->
     </div>
-    <!-- /.main -
+    <!-- /.main -->
 
+    <div id="footerBar">
+      <div class="container-fluid" style="padding: 0">
+        <div class="row text-center">
+
+          <a href="#"
+             data-toggle="modal"
+             data-target="#basicModal"><span class="glyphicon glyphicon-fire"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Die Abfahrtmonitor App v0.1.1</h4>
+          </div>
+          <div class="modal-body">
+            <p>Data provided by Stadtwerke Tübingen</p>
+            <p>Created by Daniel Federschmidt</p>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default modalBtn" data-dismiss="modal">Zurück</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- build:js scripts/vendor.js -->
         <!-- injector:bowerjs -->
         <script src="lib/jquery/dist/jquery.js"></script>
