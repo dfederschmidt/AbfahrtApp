@@ -2,7 +2,7 @@
     <input type="text" class="form-control" ng-model="searchText" placeholder="Suche deine Haltestelle...">
   <div id="searchTextResults">
   <table class="table">
-    <tr ng-show="searchText" ng-repeat="station in stations | filter:{'stop':  searchText} |limitTo: 7" >
+    <tr ng-show="searchText" ng-repeat="station in stations | filter:{'stop':  searchText} |limitTo: 5" >
       <td><a href="#!stations/{{station.id}}" data-ignore="true"> {{station.stop}} <span ng-show="station.plattform"> - </span> {{station.plattform}}</a></td>
     </tr>
     </table>
