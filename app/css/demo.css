@@ -346,6 +346,8 @@ border-color: #fff;
 }
 #searchTextResults{
   padding-top: 5%;
+  width: 100%;
+
 }
 .table > tbody > tr:first-child > td {
   border: none;
@@ -381,4 +383,15 @@ a,a:hover,a:focus{
 
 div.modal-content{
   background-color:#26343F;
+}
+
+#favorites {
+  position: fixed;
+  bottom: 0;
+  width: 92%;
+  text-align: right;
+  padding-bottom: 10%;
+}
+#favStar {
+  text-align: center;
 }

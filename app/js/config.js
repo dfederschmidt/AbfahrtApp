@@ -18,8 +18,15 @@ var ApplicationConfiguration = (function() {
             .requires
             .push(moduleName);
     };
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+      if(window.localStorage.getItem('favorites') == undefined){
+        var emptyArray = [];
+        window.localStorage['favorites'] = JSON.stringify(emptyArray);
+      }
+    }
 
-    return {
+  return {
         applicationModuleName: applicationModuleName,
         applicationModuleVendorDependencies: applicationModuleVendorDependencies,
         registerModule: registerModule

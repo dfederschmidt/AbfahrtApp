@@ -1,10 +1,33 @@
 <section ng-controller="SearchController">
     <input type="text" class="form-control" ng-model="searchText" placeholder="Suche deine Haltestelle...">
   <div id="searchTextResults">
-  <table class="table">
+  <table class="table text-center">
     <tr ng-show="searchText" ng-repeat="station in stations | filter:{'stop':  searchText} |limitTo: 5" >
       <td><a href="#!stations/{{station.id}}" data-ignore="true"> {{station.stop}} <span ng-show="station.plattform"> - </span> {{station.plattform}}</a></td>
     </tr>
     </table>
   </div>
+  <div id="favorites">
+    <p id="favStar"><a href="#" data-toggle="modal" data-target="#deleteFavs"><span ng-show="favorites" class="glyphicon glyphicon-star"></span></a></p>
+    <table class="table text-center">
+            <tr ng-repeat="fav in favorites | reverse| limitTo: 5" >
+              <td><a href="#!stations/{{fav.id}}"> {{fav.stop}} <span ng-show="fav.plattform"> - </span> {{fav.plattform}}</a></td>
+            </tr>
+          </table>
+    </div>
 </section>
+
+<div class="modal fade" id="deleteFavs" tabindex="-1" role="dialog" aria-labelledby="deleteFavs" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Wollen sie alle Favoriten löschen?</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default modalBtn" data-dismiss="modal">Zurück</button>
+        <button type="button" class="btn btn-default modalBtn" onclick="window.localStorage.clear(); window.location.reload()" data-dismiss="modal">Favoriten löschen</button>
+      </div>
+    </div>
+  </div>
+</div>
