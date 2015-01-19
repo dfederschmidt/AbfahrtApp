@@ -7,7 +7,7 @@
     </tr>
     </table>
   </div>
-  <div id="favorites">
+  <div id="favorites" ng-hide="searchText">
     <p id="favStar"><a href="#" data-toggle="modal" data-target="#deleteFavs"><span ng-show="favorites" class="glyphicon glyphicon-star"></span></a></p>
     <table class="table text-center">
             <tr ng-repeat="fav in favorites | reverse| limitTo: 5" >
