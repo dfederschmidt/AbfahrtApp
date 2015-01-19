@@ -1,1 +1,2 @@
 <icon platform="android" src="img/small.png" density="xhdpi" height="96" width="96" />
+<preference name="KeyboardShrinksView" value="false" />
