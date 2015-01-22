@@ -1,5 +1,5 @@
 <section ng-controller="SearchController">
-    <input type="text" class="form-control" ng-model="searchText" placeholder="Suche deine Haltestelle...">
+    <input type="text" class="form-control" ng-model="searchText" placeholder="Suche eine Haltestelle...">
   <div id="searchTextResults">
   <table class="table text-center">
     <tr ng-show="searchText" ng-repeat="station in stations | filter:{'stop':  searchText} |limitTo: 5" >

@@ -7,6 +7,9 @@ body {
     background-color: #169ED2;
     color: #F8f8f8;
 }
+.searchIcon{
+  color:#626262;
+}
 
 .ng-cloak {
     opacity: 0;
